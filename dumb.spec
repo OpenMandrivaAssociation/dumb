@@ -10,7 +10,6 @@ Source0: http://prdownloads.sourceforge.net/dumb/%{name}-%{version}.tar.bz2
 License: BSD-like
 Group: Sound
 Url: http://dumb.sf.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: liballegro-devel
 
 %description
