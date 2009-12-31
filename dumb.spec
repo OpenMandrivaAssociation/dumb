@@ -1,6 +1,6 @@
 %define name dumb
 %define version 0.9.3
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary: Dynamic Universal Music Bibliotheque
 Name: %{name}
