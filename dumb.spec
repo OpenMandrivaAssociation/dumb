@@ -7,7 +7,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/dumb/%{name}-%{version}.tar.bz2
-Patch: dumb-0.9.3-fix-linking.patch
+Patch0: dumb-0.9.3-fix-linking.patch
 License: BSD-like
 Group: Sound
 Url: http://dumb.sf.net/
@@ -27,8 +27,7 @@ and C header files.
 
 %prep
 %setup -q
-%patch -p1
-
+%patch0 -p1
 cat > make/config.txt << EOF
 include make/unix.inc
 ALL_TARGETS := core core-examples core-headers
