@@ -28,6 +28,7 @@ and C header files.
 %prep
 %setup -q
 %patch -p1
+
 cat > make/config.txt << EOF
 include make/unix.inc
 ALL_TARGETS := core core-examples core-headers
