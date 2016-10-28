@@ -1,0 +1,15 @@
+--- dumb-1.0/CMakeLists.txt.omv~	2016-10-28 12:32:12.155202258 +0200
++++ dumb-1.0/CMakeLists.txt	2016-10-28 12:34:25.371056811 +0200
+@@ -137,10 +137,11 @@ set(ALLEGRO_SOURCES
+ 
+ 
+ add_library(dumb ${SOURCES})
+-set_target_properties(dumb PROPERTIES DEBUG_POSTFIX d)
++set_target_properties(dumb PROPERTIES DEBUG_POSTFIX d VERSION 1.0 SOVERSION 1)
+ 
+ if(BUILD_ALLEGRO4)
+     add_library(aldmb ${ALLEGRO_SOURCES})
++    set_target_properties(aldmb PROPERTIES VERSION 1.0 SOVERSION 1)
+     list(APPEND DUMB_TARGETS aldmb)
+     list(APPEND INSTALL_HEADERS include/aldumb.h)
+     target_link_libraries(aldmb ${ALLEGRO_LIBRARIES} dumb)
