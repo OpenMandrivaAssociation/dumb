@@ -6,15 +6,13 @@
 
 Summary:	Dynamic Universal Music Bibliotheque
 Name:		dumb
-Version:	1.0
+Version:	2.0.3
 Release:	1
 License:	BSD
 Group:		Sound
 Url:		http://dumb.sf.net/
 # Post-0.9.3 versions are at https://github.com/kode54/dumb
-Source0:	%{name}-%{version}.tar.xz
-Patch0:		dumb-1.0-linkage.patch
-Patch1:		dumb-1.0-sonames.patch
+Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	pkgconfig(allegro)
@@ -74,15 +72,15 @@ and C header files.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
+
 %cmake \
 	-DBUILD_SHARED_LIBS:BOOL=ON \
 	-DBUILD_STATIC_LIBS:BOOL=ON \
 	-G Ninja
 
 %build
-ninja -C build
+%ninja_build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%nina_install
