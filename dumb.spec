@@ -7,7 +7,7 @@
 Summary:	Dynamic Universal Music Bibliotheque
 Name:		dumb
 Version:	2.0.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Sound
 Url:		http://dumb.sf.net/
