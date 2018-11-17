@@ -17,7 +17,8 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	pkgconfig(allegro)
 BuildRequires:	pkgconfig(argtable2)
-BuildRequires:	cmake(SDL2)
+#BuildRequires:	cmake(SDL2)
+BuildRequires:  pkgconfig(sdl2)
 
 %description
 DUMB is an IT, XM, S3M and MOD player library. This includes a player based
