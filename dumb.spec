@@ -38,7 +38,7 @@ Group:		System/Libraries
 DUMB is an IT, XM, S3M and MOD player library.
 
 %files -n %{libdumb}
-%{_libdir}/libdumb.so.%{major}*
+#{_libdir}/libdumb.so.%{major}*
 
 #----------------------------------------------------------------------------
 
