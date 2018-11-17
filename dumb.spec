@@ -25,7 +25,7 @@ DUMB is an IT, XM, S3M and MOD player library. This includes a player based
 on Allegro.
 
 %files
-%doc readme.txt licence.txt release.txt
+%doc README.md LICENSE
 %{_bindir}/*
 
 #----------------------------------------------------------------------------
