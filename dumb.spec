@@ -51,7 +51,7 @@ Requires:	%{libdumb} = %{EVRD}
 DUMB is an IT, XM, S3M and MOD player library for use with the Allegro library
 
 %files -n %{libaldmb}
-3{_libdir}/libaldmb.so.%{major}*
+#{_libdir}/libaldmb.so.%{major}*
 
 #----------------------------------------------------------------------------
 
