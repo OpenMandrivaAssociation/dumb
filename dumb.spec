@@ -1,5 +1,5 @@
 %define debug_package %{nil}
-%define major 1
+%define major 2
 %define libdumb %mklibname dumb %{major}
 %define libaldmb %mklibname aldmb %{major}
 %define devname %mklibname -d dumb
@@ -38,7 +38,7 @@ Group:		System/Libraries
 DUMB is an IT, XM, S3M and MOD player library.
 
 %files -n %{libdumb}
-#{_libdir}/libdumb.so.%{major}*
+%{_libdir}/libdumb.so.%{major}*
 
 #----------------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ Requires:	%{libdumb} = %{EVRD}
 DUMB is an IT, XM, S3M and MOD player library for use with the Allegro library
 
 %files -n %{libaldmb}
-#{_libdir}/libaldmb.so.%{major}*
+%{_libdir}/libaldmb.so.%{major}*
 
 #----------------------------------------------------------------------------
 
@@ -69,6 +69,7 @@ and C header files.
 %files -n %{devname}
 %{_libdir}/lib*.so
 %{_includedir}/*.h
+%{_libdir}/pkgconfig/dumb.pc
 
 #----------------------------------------------------------------------------
 
