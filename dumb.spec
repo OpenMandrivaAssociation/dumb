@@ -78,10 +78,11 @@ and C header files.
 %cmake \
 	-DBUILD_SHARED_LIBS:BOOL=ON \
 	-DBUILD_STATIC_LIBS:BOOL=ON \
-	-G Ninja
+	
 
 %build
-%ninja_build
+%configure2_5x
+%make
 
 %install
-%nina_install
+%makeinstall_std
