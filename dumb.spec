@@ -1,5 +1,5 @@
 %define debug_package %{nil}
-%define major 1
+%define major 2
 %define libdumb %mklibname dumb %{major}
 %define libaldmb %mklibname aldmb %{major}
 %define devname %mklibname -d dumb
@@ -17,14 +17,15 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	pkgconfig(allegro)
 BuildRequires:	pkgconfig(argtable2)
-BuildRequires:	cmake(SDL2)
+#BuildRequires:	cmake(SDL2)
+BuildRequires:  pkgconfig(sdl2)
 
 %description
 DUMB is an IT, XM, S3M and MOD player library. This includes a player based
 on Allegro.
 
 %files
-%doc readme.txt licence.txt release.txt
+%doc README.md LICENSE
 %{_bindir}/*
 
 #----------------------------------------------------------------------------
@@ -68,6 +69,7 @@ and C header files.
 %files -n %{devname}
 %{_libdir}/lib*.so
 %{_includedir}/*.h
+%{_libdir}/pkgconfig/dumb.pc
 
 #----------------------------------------------------------------------------
 
@@ -77,10 +79,10 @@ and C header files.
 %cmake \
 	-DBUILD_SHARED_LIBS:BOOL=ON \
 	-DBUILD_STATIC_LIBS:BOOL=ON \
-	-G Ninja
+	-GNinja
 
 %build
-%ninja_build
+%ninja -C build
 
 %install
-%nina_install
+%ninja_install -C build
