@@ -1,4 +1,3 @@
-%define debug_package %{nil}
 %define major 2
 %define libdumb %mklibname dumb %{major}
 %define libaldmb %mklibname aldmb %{major}
@@ -7,7 +6,7 @@
 Summary:	Dynamic Universal Music Bibliotheque
 Name:		dumb
 Version:	2.0.3
-Release:	2
+Release:	3
 License:	BSD
 Group:		Sound
 Url:		http://dumb.sf.net/
