@@ -9,7 +9,7 @@ Version:	2.0.3
 Release:	4
 License:	BSD
 Group:		Sound
-Url:		http://dumb.sf.net/
+Url:		https://dumb.sf.net/
 # Post-0.9.3 versions are at https://github.com/kode54/dumb
 Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	cmake
